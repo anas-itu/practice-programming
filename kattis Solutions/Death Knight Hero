@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+#include <algorithm>
+#include <iomanip>
+#include <bits/stdc++.h>
+#include <sstream>
+#include <vector>
+const double pi = acos(-1);
+using namespace std;
+
+int main() {
+	int num;
+	string s;
+	cin>>num;
+	int y=0;
+	for(int i=0; i<num; ++i) {
+		int x = 0;
+		cin>>s;
+		int len = (int)s.size();
+		for(int i=1; i<len; ++i) {
+			if(s[i - 1] == 'C' && s[i] == 'D')
+				x = 1;
+		}
+		if(x == 1)
+			continue;
+		else
+			++y;
+	}
+	cout<<y;
+	return 0;
+}
